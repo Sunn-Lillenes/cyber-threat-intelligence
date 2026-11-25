@@ -1,0 +1,6 @@
+Date,IR/PIR,Item Type (Report/CVE/Tweet/IOC),Title/ID,Link/Location,Key Facts/Highlights,Related ATT&CK (e.g. T1059),TLP
+2025-11-11,PIR-1,CVE,CVE-2025-12345,"https://nvd.nist.gov/vuln/detail/CVE-2025-12345","RCE in Fortinet SSL-VPN actively exploited; patch available","T1190","TLP:AMBER"
+2025-11-11,IR-1,Tweet,@vxunderground tweet,"https://twitter.com/vxunderground/status/1722700000000000000","Observed phishing campaign impersonating Nordea Bank; lures redirect to fake M365 login","T1566.002","TLP:GREEN"
+2025-11-11,IR-2,Report,"Abuse.ch Feodo Tracker","https://feodotracker.abuse.ch/","Detected C2 infrastructure overlap with previous banking trojans","T1071.001","TLP:WHITE"
+2025-11-11,IR-4,OSINT scan,Shodan search: Fortinet exposed ports,"https://www.shodan.io/search?query=fortigate+ssl","Identified 2 Fortinet VPN portals with HTTP title 'FortiGate SSL'","T1046","TLP:WHITE"
+2025-11-13,IR-4,OSINT scan,Shodan search: Fortinet SSL-VPN portals,"https://www.shodan.io/search?query=fortinet+port:443","Identified exposed Fortinet VPN devices on HTTPS ports, possibly exploitable if unpatched","T1046","TLP:WHITE"

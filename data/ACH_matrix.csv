@@ -1,0 +1,5 @@
+Hypothesis,Evidence,Consistent,Inconsistent,Comment
+H1: Single actor,Shared C2 IP ranges,Yes,,Supports unified infra theory
+H1: Single actor,Different phishing lures,,Yes,Weakens single-actor assumption
+H2: Multiple actors,Different hosting ASN,Yes,,Suggests separate groups
+H2: Multiple actors,Identical SSL certs,,Yes,Contradicts H2

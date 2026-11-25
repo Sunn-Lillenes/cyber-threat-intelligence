@@ -1,0 +1,13 @@
+.venv
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+.ipynb_checkpoints/
+.cache/
+node_modules/
+*.db
+logs/
+uploads/

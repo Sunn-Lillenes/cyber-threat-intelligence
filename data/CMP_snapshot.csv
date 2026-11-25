@@ -1,0 +1,9 @@
+Source,Type,Reliability (A–F),Credibility (1–6),Scope,Coverage,Frequency,Redundancy,TLP,Owner,Notes
+SIEM (Microsoft Sentinel),Internal,A,2,Internal logs,Endpoint & network telemetry,Daily,Medium,AMBER,CTI Team,Detects inbound/outbound anomalies
+EDR (Defender for Endpoint),Internal,B,2,Endpoints,Host compromise detection,Daily,Medium,AMBER,SOC Lead,Correlates with phishing attachments
+Phishing Mailbox,Internal,B,3,Email,User-reported phish samples,Daily,Low,AMBER,Blue Team,Feeds IR-1
+Shodan,External OSINT,B,3,Internet exposure,Fortinet SSL-VPN reconnaissance,Weekly,High,GREEN,Analyst,Validates external attack surface
+Abuse.ch,External OSINT,B,2,Threat feeds,C2/URL indicators,Daily,Medium,GREEN,CTI Team,Feeds IR-2
+VirusTotal,External OSINT,C,3,Malware/dns,Domain/IP reputation,Ad-hoc,High,GREEN,Analyst,Confirms cross-infection
+NFCERT,Trusted Community,A,2,Sector intel,Financial sector incidents,Weekly,Low,AMBER,CISO Liaison,Provides sector context
+MISP,Sharing Platform,B,2,Intel sharing,IOC correlation,Weekly,Medium,AMBER,CTI Team,Synchronizes with SOC TIP

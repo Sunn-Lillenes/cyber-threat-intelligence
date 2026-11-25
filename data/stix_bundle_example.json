@@ -1,0 +1,113 @@
+{ 
+  "type": "bundle",
+  "id": "bundle--8c4d8e7c-52b9-4f7e-9b9f-2f9f45b6c4b7",
+  "objects": [
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0b7cb6ef-3db7-44d6-8d10-5e8d2a9b3c88",
+      "created": "2025-11-12T10:00:00Z",
+      "modified": "2025-11-12T10:00:00Z",
+      "name": "IP observed in Shodan (example)",
+      "pattern_type": "stix",
+      "pattern": "[ipv4-addr:value = '203.0.113.45']",
+      "valid_from": "2025-11-12T10:00:00Z",
+      "confidence": 60,
+      "labels": ["shodan", "vpn", "externally-exposed"]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e1a2c3d4-5678-49ab-9cde-ff0011223344",
+      "created": "2025-11-12T10:00:00Z",
+      "modified": "2025-11-12T10:00:00Z",
+      "name": "Domain observed in phishing/OWA (example)",
+      "pattern_type": "stix",
+      "pattern": "[domain-name:value = 'example.org']",
+      "valid_from": "2025-11-12T10:00:00Z",
+      "confidence": 60,
+      "labels": ["phishing", "owa"]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--5e6f7a89-1b2c-4d3e-9f01-23456789abcd",
+      "created": "2025-11-12T10:00:00Z",
+      "modified": "2025-11-12T10:00:00Z",
+      "name": "Fortinet SSL-VPN exposure",
+      "description": "Publicly reachable SSL-VPN endpoints; see CVE reference.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-12345"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--a3d3f92d-1f8f-4d46-af38-6d2a3e0a29f1",
+      "created": "2025-11-12T10:00:00Z",
+      "modified": "2025-11-12T10:00:00Z",
+      "name": "Exploit Public-Facing Application",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "spec_version": "2.1",
+      "id": "infrastructure--6b9f3c0e-1a2b-4c3d-9e8f-7a6b5c4d3e2f",
+      "created": "2025-11-12T10:00:00Z",
+      "modified": "2025-11-12T10:00:00Z",
+      "name": "Fortinet SSL-VPN"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b1c2d3e4-f567-48a9-9abc-de0f12345678",
+      "relationship_type": "related-to",
+      "created": "2025-11-12T10:00:00Z",
+      "modified": "2025-11-12T10:00:00Z",
+      "source_ref": "indicator--0b7cb6ef-3db7-44d6-8d10-5e8d2a9b3c88",
+      "target_ref": "infrastructure--6b9f3c0e-1a2b-4c3d-9e8f-7a6b5c4d3e2f",
+      "confidence": 60
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c2d3e4f5-a678-49ab-8cde-f0123456789a",
+      "relationship_type": "related-to",
+      "created": "2025-11-12T10:00:00Z",
+      "modified": "2025-11-12T10:00:00Z",
+      "source_ref": "indicator--e1a2c3d4-5678-49ab-9cde-ff0011223344",
+      "target_ref": "infrastructure--6b9f3c0e-1a2b-4c3d-9e8f-7a6b5c4d3e2f",
+      "confidence": 60
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d3e4f5a6-b789-4abc-9def-0123456789ab",
+      "relationship_type": "related-to",
+      "created": "2025-11-12T10:00:00Z",
+      "modified": "2025-11-12T10:00:00Z",
+      "source_ref": "infrastructure--6b9f3c0e-1a2b-4c3d-9e8f-7a6b5c4d3e2f",
+      "target_ref": "vulnerability--5e6f7a89-1b2c-4d3e-9f01-23456789abcd",
+      "confidence": 60
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e4f5a6b7-c89a-4bcd-8ef0-123456789abc",
+      "relationship_type": "related-to",
+      "created": "2025-11-12T10:00:00Z",
+      "modified": "2025-11-12T10:00:00Z",
+      "source_ref": "infrastructure--6b9f3c0e-1a2b-4c3d-9e8f-7a6b5c4d3e2f",
+      "target_ref": "attack-pattern--a3d3f92d-1f8f-4d46-af38-6d2a3e0a29f1",
+      "confidence": 60
+    }
+  ]
+}
